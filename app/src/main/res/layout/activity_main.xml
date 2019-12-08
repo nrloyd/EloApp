@@ -29,13 +29,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Default 1 wins"
-        app:layout_constraintStart_toStartOf="@+id/editText1"
-        app:layout_constraintTop_toBottomOf="@+id/editText1" />
+        app:layout_constraintStart_toStartOf="@+id/elo1"
+        app:layout_constraintTop_toBottomOf="@+id/elo1" />
 
     <Button
         android:id="@+id/button2"
@@ -43,11 +43,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Default 2 wins"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintEnd_toEndOf="@+id/elo2"
+        app:layout_constraintTop_toBottomOf="@+id/elo2" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/elo2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/player2" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/elo1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -71,13 +71,13 @@
         app:layout_constraintTop_toBottomOf="@+id/player1" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
