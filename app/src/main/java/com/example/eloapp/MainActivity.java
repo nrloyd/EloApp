@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText elo1;
     private EditText elo2;
     private TextView textView;
+    private Button predict;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private void initializeDisplayContent() {
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
+        predict = findViewById(R.id.predictButton);
         elo1 = findViewById(R.id.elo1);
         elo2 = findViewById(R.id.elo2);
         textView = findViewById(R.id.textView);
@@ -58,6 +60,17 @@ public class MainActivity extends AppCompatActivity {
                 elo1.setText(Integer.toString(elo1int + result));
                 elo2.setText(Integer.toString(elo2int - result));
                 textView.setText("Change in elo: " + Integer.toString(result));
+            }
+        });
+
+        predict.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int elo1int = Integer.parseInt((elo1.getText().toString()));
+                int elo2int = Integer.parseInt((elo2.getText().toString()));
+                double odds = Calculator.predict(elo1int, elo2int, 0);
+
+                textView.setText("Probability of default 1 victory: " + Double.toString(odds));
             }
         });
     }
